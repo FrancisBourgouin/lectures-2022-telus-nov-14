@@ -40,12 +40,15 @@ calculateSomethingThen(5, 5, addToArray); // addToArray is THE callback of calcu
 //   addToArray(5); // helper function
 // };
 
-const doSomethingToAnArray = (arr, action) => action(arr);
+const doSomethingToAnArray = (arr, mean) => mean(arr);
+
+// A callback is a function given as a parameter to another function
 
 const mean = (arr) => {
   return sum(arr) / count(arr);
 };
 
+doSomethingToAnArray([1, 2, 3], mean);
 // mean([1,2,3])
 
 // for(let i = 0; i < 10; i++){
