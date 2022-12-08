@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Media Queries</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <style>
+      section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+      img {
+        width: 100%;
+      }
+      /* Mobile first */
+      article {
+        width: 100%;
+      }
+
+      @media screen and (min-width: 768px) {
+        article {
+          width: 45%;
+        }
+      }
+
+      @media screen and (min-width: 1280px) {
+        article {
+          width: 30%;
+        }
+      }
+      /* Desktop first */
+      article {
+        width: 30%;
+      }
+
+      @media screen and (max-width: 1280px) {
+        article {
+          width: 45%;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        article {
+          width: 100%;
+        }
+      }
+
+      /* Small phone : 350px */
+      /* min-width(350px) */
+      /* Big phone / tablet portrait : 768px */
+      /* min-width(768px) */
+      /* tablet landscape / small laptop : 1024px */
+      /* small laptop : 1280px */
+      /* large laptop : 1920px */
+    </style>
+    <section>
+      <article>
+        <img src="/images/20220131174506_1.jpg" alt="" />
+        <h1>Title of image</h1>
+      </article>
+      <article>
+        <img src="/images/20220131221341_1.jpg" alt="" />
+        <h1>Title of image</h1>
+      </article>
+      <article>
+        <img src="/images/20220201000857_1.jpg" alt="" />
+        <h1>Title of image</h1>
+      </article>
+      <article>
+        <img src="/images/20220202213814_1.jpg" alt="" />
+        <h1>Title of image</h1>
+      </article>
+    </section>
+  </body>
+</html>
