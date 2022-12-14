@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <style>
+      button {
+        height: 0;
+        overflow: hidden;
+      }
+      div {
+      }
+      .parentThingy {
+        padding: 0;
+        background-color: #bada55;
+        position: relative;
+      }
+      .child1 {
+        width: 75%;
+        height: 150px;
+        background-color: #b0b;
+        position: relative;
+      }
+      div:hover {
+        animation-duration: 300ms;
+        transition: height 1500ms linear;
+        animation: bounce 1s linear infinite;
+      }
+      .child2 {
+        width: 75%;
+        height: 150px;
+        background-color: #bad;
+        position: relative;
+      }
+
+      @keyframes bounce {
+        0% {
+          top: 0;
+        }
+        25% {
+          top: 0.3em;
+        }
+        50% {
+          top: 1em;
+        }
+        75% {
+          top: 0.3em;
+        }
+        100% {
+          top: 0;
+        }
+      }
+    </style>
+    <button>Hello!</button>
+    <div class="parentThingy">
+      <div class="child1"></div>
+      <div class="child2"></div>
+    </div>
+  </body>
+</html>
